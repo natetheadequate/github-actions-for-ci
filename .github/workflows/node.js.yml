@@ -33,5 +33,9 @@ jobs:
       run: |
         npm install
         npm test
+    - uses: actions/upload-artifact@master
+      with:
+          name: webpack artifacts
+          path: public/
       env:
         CI: true
